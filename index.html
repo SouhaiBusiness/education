@@ -372,7 +372,9 @@ background: linear-gradient(135deg,
 	top: -1.3rem;
 	transform: rotate(45deg);
 }
-
+.swiper-pagination{
+   margin-top: 3rem;
+}
 
 /* Footer*/
 
@@ -685,12 +687,12 @@ footer ul li a:hover{
 <body>
   <nav>
   	<div class="container nav_container">
-  		<a href="file:///C:/Users/Dahmouni/Documents/eduction%20school%20web%20site/MOR.University.html"><h4>MOR.university</h4></a>
+  		<a href="index.html"><h4>MOR.university</h4></a>
   		<ul class="nav_menu">
-  			<li><a href="file:///C:/Users/Dahmouni/Documents/eduction%20school%20web%20site/MOR.University.html">Home</a></li>
-  			<li><a href="file:///C:/Users/Dahmouni/Documents/eduction%20school%20web%20site/courses.html">Courses</a></li>
-  			<li><a href="file:///C:/Users/Dahmouni/Documents/eduction%20school%20web%20site/about.html">About</a></li>
-  			<li><a href="file:///C:/Users/Dahmouni/Documents/eduction%20school%20web%20site/contact.html">Contact</a></li>
+  			<li><a href="index.html">Home</a></li>
+  			<li><a href="courses.html">Courses</a></li>
+  			<li><a href="about.html">About</a></li>
+  			<li><a href="contact.html">Contact</a></li>
   		</ul>
   		<button id="open-menu-btn"><ion-icon name="list-outline"></ion-icon></button>
   		<button id="close-menu-btn"><ion-icon name="close-outline"></ion-icon></button>
@@ -876,7 +878,7 @@ footer ul li a:hover{
  <!-- testimonials-->
 
 
-<section class="container testimonials_container mySwiper">
+<section class="container testimonials_container swiper">
 	<h2>Students' Testimonials</h2>
 	<div class="swiper-wrapper">
 		<article class="testimonial swiper-slide">
@@ -963,6 +965,11 @@ footer ul li a:hover{
 			</div>
 		</article>
 	</div>
+
+	  <div class="swiper-button-prev"></div>
+     <div class="swiper-button-next"></div>
+<br>
+<br>
 	  <div class="swiper-pagination"></div>
 </section>
 
@@ -976,10 +983,10 @@ footer ul li a:hover{
 		<div class="footer_2">
 			<h4>Permalinks</h4>
 			<ul class="permalinks">
-  			<li><a href="file:///C:/Users/Dahmouni/Documents/eduction%20school%20web%20site/MOR.University.html">Home</a></li>
-  			<li><a href="file:///C:/Users/Dahmouni/Documents/eduction%20school%20web%20site/courses.html">Courses</a></li>
-  			<li><a href="file:///C:/Users/Dahmouni/Documents/eduction%20school%20web%20site/about.html">About</a></li>
-  			<li><a href="file:///C:/Users/Dahmouni/Documents/eduction%20school%20web%20site/contact.html">Contact</a></li>
+  			<li><a href="index.html">Home</a></li>
+  			<li><a href="courses.html">Courses</a></li>
+  			<li><a href="about.html">About</a></li>
+  			<li><a href="contact.html">Contact</a></li>
   		</ul>
 		</div>
         
@@ -1017,8 +1024,9 @@ footer ul li a:hover{
 
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 <!-- cdn swiper-->
-<!-- cdn swiper-->
+
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
 <script type="text/javascript">
@@ -1070,29 +1078,29 @@ menuBtn.addEventListener('click', () => {
 
   	
 </script>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-<!-- cdn swiper-->
-<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+
+
 <script type="text/javascript">
-	// Swiper code
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
 
-  var swiper = new Swiper(".mySwiper", {
-  	slidesPerView: 1;
-  	spaceBetween: 30,
-  	pagination: {
-  		el: ".swiper-pagination",
-  		clickable: true,
-  	},
-  	
-  	// when window width is >= 600px
 
-  	breakpoints: {
-  		600: {
-  			slidesPerView: 2
-  		}
-  	}
-  });
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+   pagination: {
+    el: '.swiper-pagination',
+  },
+
+});
+
 </script>
 
 <script type="text/javascript">
